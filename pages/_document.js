@@ -1,15 +1,18 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="GPT-3 Writer" key="title"/>
-        <meta property="og:description" content="build with buildspace" key="description"/>
+        <title>AI with Purpose</title>
+        <meta charSet="utf-8" />
+        <meta property="og:title" content="AI Template" key="title" />
         <meta
-          property="og:image"
-          content="https://cdn.buildspace.so/courses/gpt3-writer/project-og.jpg"
+          property="og:description"
+          content="Powered with Purpose"
+          key="description"
         />
+
         <meta name="twitter:card" content="summary_large_image"></meta>
       </Head>
       <body>
@@ -17,5 +20,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
