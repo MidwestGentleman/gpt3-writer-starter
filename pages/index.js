@@ -1,7 +1,6 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import buildspaceLogo from '../assets/buildspace-logo.png';
-import purposeLogo from '../assets/BadgeOnly.png'
+import Head from "next/head";
+import Image from "next/image";
+import purposeLogo from "../assets/BadgeOnly.png";
 import { useState } from "react";
 
 const Home = () => {
@@ -37,30 +36,19 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Lunch with...</h1>
+            <h1>Ask AI</h1>
 
             {/* <h1>Threador</h1> */}
           </div>
           <div className="header-subtitle">
             <h2>
-              Use AI to talk to someone from the past. If you could have lunch
-              with anyone, who would it be?
+              This AI is a sophisticated natural language model. Test it out by
+              asking a question?
             </h2>
             {/* <h2>Use AI to generate tweet threads automatically</h2> */}
           </div>
         </div>
-        {apiOutput && (
-          <div className="output">
-            <div className="output-header-container">
-              <div className="output-header">
-                <h3>Output</h3>
-              </div>
-            </div>
-            <div className="output-content">
-              <p>{apiOutput.trim()}</p>
-            </div>
-          </div>
-        )}
+
         <div className="prompt-container">
           <textarea
             placeholder="start typing here"
@@ -76,16 +64,24 @@ const Home = () => {
               onClick={callGenerateEndpoint}
             >
               <div className="generate">
-                {isGenerating ? (
-                  <span className="loader"></span>
-                ) : (
-                  <p>Generate</p>
-                )}
+                {isGenerating ? <span className="loader"></span> : <p>Ask</p>}
               </div>
             </a>
           </div>
         </div>
       </div>
+      {apiOutput && (
+        <div className="output">
+          <div className="output-header-container">
+            <div className="output-header">
+              <h3>Output</h3>
+            </div>
+          </div>
+          <div className="prompt-box">
+            <p>{apiOutput.trim()}</p>
+          </div>
+        </div>
+      )}
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
