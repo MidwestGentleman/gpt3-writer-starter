@@ -43,7 +43,7 @@ const Home = () => {
           <div className="header-subtitle">
             <h2>
               This AI is a sophisticated natural language model. Test it out by
-              asking a question?
+              asking a question.
             </h2>
             {/* <h2>Use AI to generate tweet threads automatically</h2> */}
           </div>
